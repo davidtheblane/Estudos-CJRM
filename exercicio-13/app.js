@@ -8,11 +8,18 @@
   "NOME_DO_GATO é um gato COR_DO_GATO de IDADE_DO_GATO anos."
 */
 
+//Resolver esse BO de escopo
 const getCatInfo = () => {
-  const name = 'Marcos'
+  return {
+  const name = "Marcos"
   let age = 3
-  const color = 'Cinza'
-}
+  const color = "Cinza"}
+};
+
+getCatInfo();
+console.log(
+  `${getCatInfo.name} é um gato ${getCatInfo.color} de ${getCatInfo.age} anos."`
+);
 
 /*
   02
@@ -23,16 +30,16 @@ const getCatInfo = () => {
 */
 
 const external = () => {
-  const movie = 'Parasite'
+  const movie = "Parasite";
 
   const internal = () => {
     const extraInternal = () => {
-      console.log(movie.toUpperCase())
-    }
-  }
-}
+      console.log(movie.toUpperCase());
+    };
+  };
+};
 
-external()
+external();
 
 /*
   03
@@ -43,7 +50,7 @@ external()
   Dica: procure pelo método reverse, no MDN.
 */
 
-let randomNumbers = [3, 2, 1]
+let randomNumbers = [3, 2, 1];
 
 /*
   04
@@ -54,10 +61,12 @@ let randomNumbers = [3, 2, 1]
 */
 
 let crazyArray = [
-  { prop1: '1', prop2: '2' },
-  function getMessage () { return 'hi' },
-  [ 5, 96, 53  ]
-]
+  { prop1: "1", prop2: "2" },
+  function getMessage() {
+    return "hi";
+  },
+  [5, 96, 53],
+];
 
 /*
   05
@@ -69,12 +78,12 @@ let crazyArray = [
 */
 
 const dogs = [
-  { name: 'Olivia', age: 3, gender: 'Female', breed: 'Maltês' },
-  { name: 'Zé', age: 2, gender: 'Male', breed: 'Pug' },
-  { name: 'Jade', age: 4, gender: 'Female', breed: 'Shiba inu' },
-  { name: 'Zequinha', age: 7, gender: 'Male', breed: 'Poodle' },
-  { name: 'Xica', age: 6, gender: 'Female', breed: 'Chihuahua' }
-]
+  { name: "Olivia", age: 3, gender: "Female", breed: "Maltês" },
+  { name: "Zé", age: 2, gender: "Male", breed: "Pug" },
+  { name: "Jade", age: 4, gender: "Female", breed: "Shiba inu" },
+  { name: "Zequinha", age: 7, gender: "Male", breed: "Poodle" },
+  { name: "Xica", age: 6, gender: "Female", breed: "Chihuahua" },
+];
 
 /*
   06
