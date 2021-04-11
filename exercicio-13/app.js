@@ -10,16 +10,16 @@
 
 //Resolver esse BO de escopo
 const getCatInfo = () => {
-  return {
-  const name = "Marcos"
-  let age = 3
-  const color = "Cinza"}
+  const name = "Marcos";
+  let age = 3;
+  const color = "Cinza";
+
+  return { name, age, color };
 };
 
-getCatInfo();
-console.log(
-  `${getCatInfo.name} é um gato ${getCatInfo.color} de ${getCatInfo.age} anos."`
-);
+const { name, color, age } = getCatInfo();
+
+// console.log(`${name} é um gato ${color} de ${age} anos."`);
 
 /*
   02
@@ -36,10 +36,12 @@ const external = () => {
     const extraInternal = () => {
       console.log(movie.toUpperCase());
     };
+    extraInternal();
   };
+  internal();
 };
 
-external();
+// external();
 
 /*
   03
@@ -51,6 +53,8 @@ external();
 */
 
 let randomNumbers = [3, 2, 1];
+
+// console.log(randomNumbers.reverse());
 
 /*
   04
@@ -68,6 +72,9 @@ let crazyArray = [
   [5, 96, 53],
 ];
 
+let firstElement = crazyArray.shift();
+// console.log(crazyArray, firstElement);
+
 /*
   05
 
@@ -84,6 +91,10 @@ const dogs = [
   { name: "Zequinha", age: 7, gender: "Male", breed: "Poodle" },
   { name: "Xica", age: 6, gender: "Female", breed: "Chihuahua" },
 ];
+
+let foundDog = dogs.find((dogZeca) => dogZeca.name === "Zequinha");
+
+// console.log(foundDog);
 
 /*
   06
@@ -117,6 +128,10 @@ const dogs = [
   </section>
 */
 
+const pageTitle = document.querySelector(".main-title");
+
+// console.log(pageTitle);
+
 /*
   07
 
@@ -124,3 +139,7 @@ const dogs = [
     página, através da classe deles;
   - Exiba esse NodeList no console.
 */
+
+const secondaryTitles = document.querySelectorAll(".secondary-title");
+
+console.log(secondaryTitles);
