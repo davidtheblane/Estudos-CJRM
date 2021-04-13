@@ -142,4 +142,4 @@ const pageTitle = document.querySelector(".main-title");
 
 const secondaryTitles = document.querySelectorAll(".secondary-title");
 
-console.log(secondaryTitles);
+// console.log(secondaryTitles);
