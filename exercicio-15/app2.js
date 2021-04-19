@@ -1,47 +1,17 @@
-// const button = document.querySelector('button')
+const article = document.querySelector("article");
+// console.log(article.children);
+// console.log(Array.from(article.children));
 
-// button.addEventListener('click', () => {
-//   console.log('Clicou no botão!')
-// })
+Array.from(article.children).forEach((element) => {
+  element.classList.add("article-element");
+});
 
-//  const lis = document.querySelectorAll('li')
+const title = document.querySelector("h2");
 
-//  lis.forEach(li => {
-//    li.addEventListener('click', event => {
-//       const clickedElement = event.target
-      
-//       clickedElement.remove()
-//    }) 
-//  })
+//Parent
+console.log(title.parentElement);
+console.log(title.parentElement.parentElement);
 
- const ul = document.querySelector('ul')
-
- const button = document.querySelector('button')
-
- button.addEventListener('click', () => {
-   const li = document.createElement('li')
-
-   li.textContent = 'Novo Item'
-   ul.prepend(li)
- })
-
-//  const lis = document.querySelectorAll('li')
-
-//  lis.forEach(li => {
-//    li.addEventListener('click', event => {
-//      const clickedElement = event.target
-//     console.log('Clicou na LI')
-
-//     event.stopPropagation()
-
-//      clickedElement.remove()
-//    })
-//  })
-
- ul.addEventListener('click', event => {
-   const clickedElement = event.target
-
-   if(clickedElement.tagName === 'LI') {
-     clickedElement.remove()
-   }
- })
+//Sibling
+console.log(title.nextElementSibling);
+console.log(title.previousElementSibling);
