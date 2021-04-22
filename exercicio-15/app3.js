@@ -6,9 +6,15 @@ botao.addEventListener("click", () => {
 
 const lis = document.querySelectorAll("li");
 
+lis.forEach((li) => {
+  li.addEventListener("click", () => {
+    console.log("Clicou na li");
+  });
+});
+
 // lis.forEach((li) => {
-//   li.addEventListener("click", () => {
-//     console.log("Clicou na li");
+//   li.addEventListener("click", (event) => {
+//     console.log(li);
 //   });
 // });
 
