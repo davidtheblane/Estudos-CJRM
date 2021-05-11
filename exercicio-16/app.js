@@ -5,19 +5,6 @@
     'Clicou na div.' não seja exibida no console.
 */
 
-const div = document.querySelector('div')
-const elementsInsideDiv = Array.from(div.children)
-
-elementsInsideDiv.forEach(element => {
-  element.addEventListener('click', () => {
-    console.log('Clicou no filho da div.')
-  })
-})
-
-div.addEventListener('click', () => {
-  console.log('Clicou na div.')
-})
-
 /*
   02
 
@@ -66,13 +53,13 @@ div.addEventListener('click', () => {
 */
 
 const people = [
-  { id: 1, name: 'Pedro Henrique', profession: 'Dentista' },
-  { id: 2, name: 'Fábio Alexandre', profession: 'Físico' },
-  { id: 3, name: 'Thiago Ferreira', profession: 'Veterinário' },
-  { id: 4, name: 'Marcelo Antonio', profession: 'Matemático' },
-  { id: 5, name: 'Camilla Midori', profession: 'Engenheira Civil' },
-  { id: 6, name: 'Gustavo D\'Aqui', profession: 'Gerente de Marketing' },
-  { id: 7, name: 'Ana Paula', profession: 'Front-end developer' },
-  { id: 8, name: 'Matheus Manucci', profession: 'Piloto' },
-  { id: 9, name: 'Hamilton Silva', profession: 'Advogado' }
-]
+  { id: 1, name: "Pedro Henrique", profession: "Dentista" },
+  { id: 2, name: "Fábio Alexandre", profession: "Físico" },
+  { id: 3, name: "Thiago Ferreira", profession: "Veterinário" },
+  { id: 4, name: "Marcelo Antonio", profession: "Matemático" },
+  { id: 5, name: "Camilla Midori", profession: "Engenheira Civil" },
+  { id: 6, name: "Gustavo D'Aqui", profession: "Gerente de Marketing" },
+  { id: 7, name: "Ana Paula", profession: "Front-end developer" },
+  { id: 8, name: "Matheus Manucci", profession: "Piloto" },
+  { id: 9, name: "Hamilton Silva", profession: "Advogado" },
+];
