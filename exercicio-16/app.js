@@ -4,6 +4,11 @@
   - Faça com que ao clicar em um dos elementos dentro da div, a mensagem  
     'Clicou na div.' não seja exibida no console.
 */
+const divBox = document.querySelector("div");
+
+divBox.addEventListener("click", (event) => {
+  console.log();
+});
 
 const div = document.querySelector('div')
 const elementsInsideDiv = Array.from(div.children)
@@ -25,6 +30,14 @@ div.addEventListener('click', () => {
     exibida no console seja "Clicou no NOME_DA_TAG_COM_LETRAS_MINÚSCULAS, filho
     da div.".
 */
+// divBox.addEventListener("click", (event) => {
+//   const childrenDiv = event.target.children;
+//   if (childrenDiv !== "<div>") {
+//     console.log(`clicou ${event.target.innerHTML} filho da div`);
+//   } else {
+//     event.target.innerHTML;
+//   }
+// });
 
 /*
   03
@@ -33,6 +46,12 @@ div.addEventListener('click', () => {
   - Faça com que a mensagem de clique na div e a mensagem de clique em algum
     filho da div, ao invés de ser exibida no console, seja inserida neste h2.
 */
+const h2 = document.querySelector("h2");
+
+divBox.addEventListener("click", (event) => {
+  const childrenDiv = event.target.children;
+  h2.innerHTML = event.target.innerHTML;
+});
 
 /*
   04
