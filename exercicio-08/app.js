@@ -7,12 +7,6 @@
   - Exiba o resultado no console, sem inserir um console.log() dentro da função.
 */
 
-function multiply(num1 = 0, num2 = 0) {
-  return num1 * num2
-}
-
-// console.log(multiply(2,7))
-
 /*
   02
 
@@ -20,12 +14,6 @@ function multiply(num1 = 0, num2 = 0) {
     **function expression** que retorne o resultado da **divisão** entre esses  
     2 números.
 */
-
-let division = function(num1 = 0, num2 = 0) {
-  return num1/num2
-}
-
-// console.log(division(20,2))
 
 /*
   03
@@ -40,15 +28,6 @@ let division = function(num1 = 0, num2 = 0) {
   "Esta é a Xª vez que essa string é exibida."
 */
 
-// const log = function(value = 'Você deve passar um valor como argumento') {
-//   console.log(value) 
-// }
-
-// for(let i = 1; i < 8; i++) {
-//   log(`Esta é a ${i}ª vez que essa string é exibida.`)
-// }
-
-
 /*
   04
 
@@ -62,17 +41,6 @@ let division = function(num1 = 0, num2 = 0) {
 
 const millennialWords = ['lol', 'yolo', 'troll', 'stalkear', 'selfie', 'influencer', 'crush', 'fitness', 'hater', 'bae', 'random', 'kawaii', 'outfit', 'mood', 'fail']
 
-let newArray = []
-
-let callArray = function(misteriousArray = []) {
- 
-  for(let i = 0; i < misteriousArray.length; i++) {
-    newArray.push(misteriousArray[i].toUpperCase())
-  }
-  return newArray
-}
-
-// console.log(callArray(millennialWords))
 /*
   05
 
@@ -86,27 +54,6 @@ let callArray = function(misteriousArray = []) {
 
 const randomNumbers = [-2, 93, 34, -1, 1, 93, 11, -7, 47, -3]
 
-let positiveCount = 0;
-let negativeCount = 0;
-
-const isPositive = function(number = 0) {
-  return number >= 1
-}
-
-  for(let i = 0; i < randomNumbers.length; i++) {
-    let number = randomNumbers[i]
-    if(isPositive(number)) {
-      positiveCount++
-    } else {
-      negativeCount++
-    }
-  }
-  
-
-
-  // console.log(`"O array "randomNumbers" possui ${randomNumbers.length} números, 
-  // sendo ${positiveCount} positivos e ${negativeCount} negativos."`)
-
 /*
   06
 
@@ -114,29 +61,10 @@ const isPositive = function(number = 0) {
   - Ela deve retornar um novo array com apenas os números ímpares do array 
     passado por argumento;
   - Exiba o novo array no console, sem inserir um console.log() dentro da  
-    função. 
+    função.
 */
 
-const newArray2 = []
-
-const getOddNumbers = function(array = []) { 
-  for(let i = 0; i < array.length; i++) {
-    let number = array[i]
-    let isOddNumber = number%2 !== 0
-    
-    if(isOddNumber) {
-      newArray2.push(number)
-      }
-  }
-  return newArray2
-}
-
-// const onlyOddNumbers = getOddNumbers([83, 52, 31, 73, 98, 37, 61, 56, 12, 24, 35, 3, 34, 80, 42]) 
-
-// console.log(onlyOddNumbers)
-
-
-
+// getOddNumbers([83, 52, 31, 73, 98, 37, 61, 56, 12, 24, 35, 3, 34, 80, 42])
 
 /*
   07
@@ -174,11 +102,3 @@ const functions = [
   function () { return 'Índias' },
   function () { return 'Ocidentais.' }
 ]
-
-let newPhrase = ''
-
-for(let i = 0 ; i < functions.length; i++) {
-  newPhrase+= `${functions[i]()} `
-}
-
-// console.log(newPhrase)

@@ -13,14 +13,9 @@
     valor no console.
 */
 
-// function convertToString (value) {
-//   return String(value)
-// }
-
-const convertToString = value => String(value)
-
-
-// console.log(convertToString(66))
+function convertToString (value) {
+  return String(value)
+}
 
 /*
   02
@@ -28,10 +23,6 @@ const convertToString = value => String(value)
   - Crie uma função que retorne a quantidade de caracteres que uma string  
     recebida por parâmetro possui.
 */
-
-const qtdeChar = value => value.length
-
-// console.log(qtdeChar('ovo'))
 
 /*
   03
@@ -43,13 +34,6 @@ const qtdeChar = value => value.length
   "CHOCOTONE E OVO DE PÁSCOA JUNTOS NO MERCADO EM PLENO FEVEREIRO"
 */
 
-const inLowerCase = value => value.toLowerCase()
-
-
-// console.log(inLowerCase(`CHOCOTONE E OVO DE PÁSCOA JUNTOS NO MERCADO EM PLENO FEVEREIRO`))
-
-
-
 /*
   04
 
@@ -57,23 +41,12 @@ const inLowerCase = value => value.toLowerCase()
   - Ao ser invocada, a função deve retornar o index do caractere na string.
 */
 
-const indexFunc = (string = '', char = '') => {
-  return string.indexOf(char)
-}
-
-
-// console.log(indexFunc('humaita', 'i'))
 /*
   05
 
   - Crie uma função que, ao ser invocada, retorna um boolean indicando se o item  
     passado por argumento existe no array (também passado por argumento).
 */
-
-const ifExists = (value = 0, array = []) =>  array.includes(value)
-
-// console.log(ifExists(7, [2, 3, 4 ,5 ,6 ,7 ,8 ,9]))
-
 
 /*
   06
@@ -82,10 +55,6 @@ const ifExists = (value = 0, array = []) =>  array.includes(value)
     argumentos em sua invocação;
 */
 
-const concatArray = (array1 = [], array2 = []) => array1.concat(array2)
-
-// console.log(concatArray([2,3,4], [5,6,7]))
-
 /*
   07
 
@@ -93,23 +62,12 @@ const concatArray = (array1 = [], array2 = []) => array1.concat(array2)
     mas com o último item removido.
 */
 
-const removeLastItem = (array = []) => {
-  array.pop()
-  return array
-}
-
-// console.log(removeLastItem([1,2,3,4,5,6]))
-
 /*
   08
 
   - Crie uma função que retorna se o valor passado como argumento em sua  
     invocação é null.
 */
-
-const isNull = (value) => value === null
-
-// console.log(isNull(null))
 
 /*
   09
@@ -122,16 +80,6 @@ const isNull = (value) => value === null
     foi exibido.
 */
 
-const callCallback = (callback) => {
-  callback()
-}
-
-const myName = () =>  {
-  console.log('Davi Bernardo')
-}
-
-// callCallback(myName)
-
 /*
   10
 
@@ -142,17 +90,6 @@ const myName = () =>  {
   - Faça com que a invocação da função descrita no 1º item deste exercício (10)  
     resulte no triplo de 33.
 */
-
-
-const callCallback2 = (value, callback) => {
-  return callback(value)
-}
-
-const triple = number => number * 3
-
-
-// console.log(callCallback2(33, triple))
-
 
 /*
   11
@@ -165,12 +102,6 @@ const triple = number => number * 3
 
 const numbers = [1, 2, 3]
 
-
-// const showNumbersInfo = (item, index, array) => {
-//   console.log(`O ${index+1}º item do array [${array.join(', ')}] é ${item}.`)
-// }
-// numbers.forEach(showNumbersInfo)
-
 /*
   12
 
@@ -182,15 +113,9 @@ const numbers = [1, 2, 3]
 const letters = ['v', 'e', 'p']
 let lettersCopy = []
 
-// for (let i = 0; i < letters.length; i++) {
-//   lettersCopy.push(letters[i])
-// }
-
-letters.forEach((value) => {
-  lettersCopy.push(value)
-})
-
-// console.log(lettersCopy)
+for (let i = 0; i < letters.length; i++) {
+  lettersCopy.push(letters[i])
+}
 
 /*
   13
@@ -221,10 +146,6 @@ const review = [
 
 let paragraphs = ''
 
-// review.forEach((value) => {
-//   paragraphs+= `<p>${value} </p>`
-// })
-
 section.innerHTML = paragraphs
 
 /*
@@ -247,33 +168,3 @@ section.innerHTML = paragraphs
     pelo restante da quantidade de pessoas que curtiram o post (além das duas  
     pessoas já mencionadas no início da mensagem).
 */
-
-
-const postLike = (people = []) => {
-
-switch(people.length) {
-
-  case 0:
-    return `Ninguém curtiu isso`
-    
-
-  case 1:
-    return `${people[0]} curtiu isso` 
-    
-
-  case 2:
-    return `${people[0]} e ${people[1]} curtiram isso` 
-    
-
-  case 3:
-    return `${people[0]}, ${people[1]} e ${people[2]} curtiram isso` 
-    
-
-  default:
-    return `${people[0]}, ${people[1]} e mais ${people.length -2} pessoas curtiram isso`
-
-}
-
-
-}
-// console.log(postLike(['Samantha']))

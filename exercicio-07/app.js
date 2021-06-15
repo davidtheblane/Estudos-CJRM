@@ -5,7 +5,7 @@
   - O resultado exibido no console deve ser: false true.
 */
 
-// console.log(!true, !false)
+console.log(true, false)
 
 /*
   02
@@ -16,13 +16,7 @@
   - Se existir, exiba no console a mensagem "Existe um leão no array animals.".
 */
 
-// const animals = ['macaco', 'tucano', 'elefante', 'pavão', 'hipopótamo']
-
-// if(!animals.includes('leão')) {
-//   console.log(' Leão não existe no array animals.')
-// } else {
-//   console.log(' Existe um leão no array animals.')
-// }
+const animals = ['macaco', 'tucano', 'elefante', 'pavão', 'hipopótamo']
 
 /*
   03
@@ -35,19 +29,7 @@
   "A soma ultrapassou 400. Até aqui, o valor atual é RESULTADO_DA_SOMA."
 */
 
-// const randomNumbers = [59, 61, 73, 57, 35, 73, 21, 87, 43]
-
-// let arraySUM = 0
-
-// for(let i = 0; i < randomNumbers.length; i++) {
-//     if(arraySUM > 400) {
-//     console.log(`A soma ultrapassou 400. Até aqui, o valor atual é ${arraySUM}.`)
-//     break
-//   }
-//   arraySUM+= randomNumbers[i]
-// }
-
-
+const randomNumbers = [59, 61, 73, 57, 35, 73, 21, 87, 43]
 
 /*
   04
@@ -58,21 +40,7 @@
   - Exiba a frase no console.
 */
 
-// const sentence = ['A', 'certeza', 'dúvida', 'é', 'o', 'princípio', 'da', 'sabedoria.']
-
-// let newPhrase = ''
-
-// for(let i = 0; i < sentence.length; i++) {
-  
-//   if(sentence[i].includes('certeza')){
-//     continue
-//   }
-  
-//   newPhrase+= `${sentence[i]} `
-// }
-
-// console.log(newPhrase)
-
+const sentence = ['A', 'certeza', 'dúvida', 'é', 'o', 'princípio', 'da', 'sabedoria.']
 
 /*
   05
@@ -89,46 +57,7 @@
   "
 */
 
-// const randomValues = [57, false, 'JS', [], true, 'HTML', 31, null, false, 'CSS', 97, true, 'Git', 11, 'sticker', false, 'GitHub', true, null]
-
-// let stringCount = 0
-// let booleanCount = 0
-// let totalCount = 0
-
-
-// let stringInArray = []
-
-
-// for (let i = 0; i < randomValues.length; i++) {
-  
-//   if(typeof randomValues[i] === 'string') {
-//     stringInArray.push(randomValues[i])
-//     stringCount++
-
-//   } else if(typeof randomValues[i] === 'boolean') {
-//     booleanCount++
-//   }
-  
-//   totalCount++
-
-//   if(stringCount >= 4) {
-//     break
-//   }
-   
-// }
-
-
-
-
-// console.log(
-//   `
-//   3 informações sobre o array randomValues:
-//       - As primeiras 4 strings são ${stringInArray.join(', ')};
-//       - Até que as primeiras 4 strings fossem iteradas, ${booleanCount} booleans foram iterados;
-//       - O array foi iterado por ${totalCount} vezes.
-//   `
-// )
-
+const randomValues = [57, false, 'JS', [], true, 'HTML', 31, null, false, 'CSS', 97, true, 'Git', 11, 'sticker', false, 'GitHub', true, null]
 
 /*
   06
@@ -150,26 +79,7 @@
     da bebida além da que você escolheu.
 */
 
-// const drinkType = 'cafe'
-
-// switch(drinkType) {
-//     case 'água':
-//     console.log('Substância química cujas moléculas são formadas por dois átomos de hidrogênio e um de oxigênio.')
-//     break;
-
-//     case 'refrigerante':
-//     console.log('Bebida não alcoólica e não fermentada, fabricada industrialmente, à base de água mineral e açúcar.')  
-//     break;
-
-//     case 'suco':
-//     console.log('Bebida produzida do líquido extraído de frutos.')  
-//     break;
-
-//     default:
-//     console.log('Bebida desconhecida.')
-//     break;
-
-// }
+// const drinkType
 
 /*
   07
@@ -179,27 +89,7 @@
     para testar o switch que você escreveu.
 */
 
-const a = 0
-
-
-// switch(a) {
-
-//   case 0:
-//     console.log(`O valor de "a" é ${a}`)
-//     break;
-
-//   case 1:  
-//     console.log(`O valor de "a" é ${a}`)
-//     break;
-
-//   default:
-//     console.log(`O valor de "a" é qualquer número, exceto 0 e 1`)
-//     break;
-// }
-
-
-
-
+const a = 2
 
 // if (a === 0) {
 //   console.log(`O valor de "a" é ${a}`)

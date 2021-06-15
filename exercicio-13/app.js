@@ -8,18 +8,11 @@
   "NOME_DO_GATO é um gato COR_DO_GATO de IDADE_DO_GATO anos."
 */
 
-//Resolver esse BO de escopo
 const getCatInfo = () => {
-  const name = "Marcos";
-  let age = 3;
-  const color = "Cinza";
-
-  return { name, age, color };
-};
-
-const { name, color, age } = getCatInfo();
-
-// console.log(`${name} é um gato ${color} de ${age} anos."`);
+  const name = 'Marcos'
+  let age = 3
+  const color = 'Cinza'
+}
 
 /*
   02
@@ -30,18 +23,16 @@ const { name, color, age } = getCatInfo();
 */
 
 const external = () => {
-  const movie = "Parasite";
+  const movie = 'Parasite'
 
   const internal = () => {
     const extraInternal = () => {
-      console.log(movie.toUpperCase());
-    };
-    extraInternal();
-  };
-  internal();
-};
+      console.log(movie.toUpperCase())
+    }
+  }
+}
 
-// external();
+external()
 
 /*
   03
@@ -52,9 +43,7 @@ const external = () => {
   Dica: procure pelo método reverse, no MDN.
 */
 
-let randomNumbers = [3, 2, 1];
-
-// console.log(randomNumbers.reverse());
+let randomNumbers = [3, 2, 1]
 
 /*
   04
@@ -65,15 +54,10 @@ let randomNumbers = [3, 2, 1];
 */
 
 let crazyArray = [
-  { prop1: "1", prop2: "2" },
-  function getMessage() {
-    return "hi";
-  },
-  [5, 96, 53],
-];
-
-let firstElement = crazyArray.shift();
-// console.log(crazyArray, firstElement);
+  { prop1: '1', prop2: '2' },
+  function getMessage () { return 'hi' },
+  [ 5, 96, 53  ]
+]
 
 /*
   05
@@ -85,16 +69,12 @@ let firstElement = crazyArray.shift();
 */
 
 const dogs = [
-  { name: "Olivia", age: 3, gender: "Female", breed: "Maltês" },
-  { name: "Zé", age: 2, gender: "Male", breed: "Pug" },
-  { name: "Jade", age: 4, gender: "Female", breed: "Shiba inu" },
-  { name: "Zequinha", age: 7, gender: "Male", breed: "Poodle" },
-  { name: "Xica", age: 6, gender: "Female", breed: "Chihuahua" },
-];
-
-let foundDog = dogs.find((dogZeca) => dogZeca.name === "Zequinha");
-
-// console.log(foundDog);
+  { name: 'Olivia', age: 3, gender: 'Female', breed: 'Maltês' },
+  { name: 'Zé', age: 2, gender: 'Male', breed: 'Pug' },
+  { name: 'Jade', age: 4, gender: 'Female', breed: 'Shiba inu' },
+  { name: 'Zequinha', age: 7, gender: 'Male', breed: 'Poodle' },
+  { name: 'Xica', age: 6, gender: 'Female', breed: 'Chihuahua' }
+]
 
 /*
   06
@@ -128,10 +108,6 @@ let foundDog = dogs.find((dogZeca) => dogZeca.name === "Zequinha");
   </section>
 */
 
-const pageTitle = document.querySelector(".main-title");
-
-// console.log(pageTitle);
-
 /*
   07
 
@@ -139,7 +115,3 @@ const pageTitle = document.querySelector(".main-title");
     página, através da classe deles;
   - Exiba esse NodeList no console.
 */
-
-const secondaryTitles = document.querySelectorAll(".secondary-title");
-
-// console.log(secondaryTitles);

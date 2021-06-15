@@ -25,18 +25,6 @@
 
 const fruits = ['morango', 'banana', 'mamão']
 
-
-  // if(fruits.includes('abacaxi')){
-  //   console.log('A string "abacaxi" existe no array fruits.')
-  // } 
-  // else if(fruits.includes('pera')){
-  //   console.log('A string "pera" existe no array fruits.')
-  // } 
-  // else {
-  //   console.log('Nem pera nem abacaxi existem no array "fruits".')
-  // }
- 
-
 /*
   02
 
@@ -49,20 +37,6 @@ const fruits = ['morango', 'banana', 'mamão']
   Obs.: tanto a expressão do lado esquerdo quanto a do lado direito do operador  
   lógico precisam ter a constante especificada. Exemplo: hour > x && hour < y.
 */
-
-// const hour = 18
-
-// if(hour >= 6 && hour <= 11) {
-//   console.log('B o m   d i a!')
-// } else if(hour >= 12 && hour <= 17) {
-//   console.log('B o a   T a r d e!')
-// } else {
-//   console.log('B o a   N o i t e!')
-// }
-
-
-
-
 
 /*
   03
@@ -78,18 +52,6 @@ const fruits = ['morango', 'banana', 'mamão']
     também está funcionando.
 */
 
-let age = 34
-let entranceValue = ''
-
-if(age <= 7 || age >= 65) {
-  entranceValue = 'Para você, a entrada é grátis!'
-} else {
-  entranceValue = 'A entrada é R$ 30,00.'
-}
-
-// console.log(entranceValue)
-
-
 /*
   04
 
@@ -100,15 +62,6 @@ if(age <= 7 || age >= 65) {
 */
 
 const numbers = [7, 92, 34, 46, 90, 25, 11, 3, 89, 76, 99]
-const numbersBetween11And90 = []
-
-for(let i = 0; i < numbers.length; i++) {
-  if(numbers[i] >= 11 && numbers[i] <=90) {
-    numbersBetween11And90.push(numbers[i])
-  }
-}
-
-// console.log(numbersBetween11And90)
 
 /*
   05
@@ -124,26 +77,6 @@ for(let i = 0; i < numbers.length; i++) {
 */
 
 const crazyArray = [true, 869, 'oi', 71, false, 83, '35', true, 397, 'js', false]
-
-let booleanCount = 0;
-let numberCount = 0;
-let stringsCount = 0;
-
-for(let i = 0; i <= crazyArray.length; i++){
-  let tipo = typeof crazyArray[i]
-  
-  if( tipo === 'boolean'){
-    booleanCount++
-  } else if (tipo === 'number'){
-    numberCount++
-  } else if(tipo === 'string'){
-    stringsCount++
-  }
-}
-
-// console.log(`O crazyArray tem ${booleanCount} booleans, ${numberCount} números e ${stringsCount} strings.`)
-
-
 
 /*
   06
@@ -163,20 +96,3 @@ for(let i = 0; i <= crazyArray.length; i++){
 */
 
 const randomNumbers = [73, 4, 67, 10, 31, 58]
-
-let oddNumbers = []
-let evenNumbers = []
-
-for(let i = 0; i < randomNumbers.length; i++){
-  let numero = randomNumbers[i]
-  
-  if(numero%2 === 0){
-    evenNumbers.push(numero)
-  } else {
-    oddNumbers.push(numero)
-  }
-}
-
-console.log(`
-Numeros ímpares: ${oddNumbers.join(', ').replace(', 3', ' e 3')}. 
-Números pares: ${evenNumbers.join(', ').replace(', 5', ' e 5')}.`)
