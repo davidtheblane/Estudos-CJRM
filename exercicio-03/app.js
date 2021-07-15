@@ -129,7 +129,7 @@ const initials = `${dogNames[0][0]}${dogNames[1][0]}${dogNames[2][0]}${dogNames[
 - Utilize o método adequado para isso.
 */
 
-// console.log(initials.toLocaleLowerCase());
+// console.log(initials.toLowerCase());
 
 /*
 11 - Comente o console.log acima e:
