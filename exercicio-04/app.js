@@ -72,11 +72,11 @@ const typeSentence = `O tipo de dado que a const "isRandomTVShowIncluded" armaze
   caracteres? BOOLEAN."
 */
 
-let number = 39;
-let moreThanNumber = typeSentence.length > number;
+let numberToCheck = 39;
+let moreThanNumber = typeSentence.length > numberToCheck;
 
-// console.log(`A string que a "typeSentence" armazena tem mais de ${number}
-// caracteres? ${String(moreThanNumber).replace("t", "T")}.`);
+// console.log(`A string que a "typeSentence" armazena tem mais de ${numberToCheck}
+// caracteres? ${String(typeSentence.length > numberToCheck).replace("t", "T")}.`);
 
 /*
   06 - Comente o console.log() acima e:
@@ -89,6 +89,9 @@ let moreThanNumber = typeSentence.length > number;
 */
 
 const falsyValues = [0, "", false, "", ``, null, undefined, NaN];
+
+// console.log(`Todos os ${falsyValues.length} itens do array "falsyValues" são falsy. Inclusive o
+// ${falsyValues[2]}.`);
 
 /*
   07 - Comente o console.log() acima e:
@@ -121,10 +124,9 @@ const crazyConversion = Boolean(crazyOperation);
 
 const ages = [31, 82, 61, 11];
 const agesSum = ages[0] + ages[2];
-const sumResult = agesSum <= 92;
 
 // console.log(`A soma entre o 1º e o 3º item de "ages" é menor ou igual a 92. Essa afirmação
-// é: ${sumResult}.`);
+// é: ${agesSum <= 92}.`);
 
 /*
   09 - Comente o console.log() acima e:
@@ -151,4 +153,6 @@ const isNotAString = typeof randomTVShow !== "string";
 
 const evenNumbers = [0, 2, 4, 6, 8, 10];
 
-console.log(evenNumbers.indexOf(8) === 4);
+//o retorno de um item que não existe no array é -1
+
+console.log(evenNumbers.indexOf(8) !== -1);
