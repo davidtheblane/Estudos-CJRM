@@ -46,16 +46,16 @@ if (fruits.includes("abacaxi")) {
   lógico precisam ter a constante especificada. Exemplo: hour > x && hour < y.
 */
 
-const myHour = 9;
+const hour = 15;
+const isMorning = hour >= 6 && hour <= 11;
+const isAfternoon = hour >= 12 && hour <= 17;
 
-if (myHour >= 6 && myHour < 12) {
+if (isMorning) {
   console.log("Bom dia!");
-} else if (myHour >= 12 && myHour < 18) {
+} else if (isAfternoon) {
   console.log("Boa Tarde!");
-} else if (myHour >= 18 && myHour <= 24) {
-  console.log("Boa Noite!");
 } else {
-  console.log("Boa Madrugada!");
+  console.log("Boa Noite");
 }
 
 /*
@@ -72,9 +72,11 @@ if (myHour >= 6 && myHour < 12) {
     também está funcionando.
 */
 const myAge = 34;
-let value = "";
+let value = null;
+const isChild = myAge <= 7;
+const isOlder = myAge >= 65;
 
-if (myAge <= 7 || myAge >= 65) {
+if (isChild || isOlder) {
   value = "Para você, a entrada é grátis!";
 } else {
   value = "A entrada é R$ 30,00.";
@@ -95,8 +97,11 @@ const numbers = [7, 92, 34, 46, 90, 25, 11, 3, 89, 76, 99];
 let newArrayNumbers = [];
 
 for (let i = 0; i < numbers.length; i++) {
-  if (numbers[i] >= 11 && numbers[i] <= 90) {
-    newArrayNumbers.push(numbers[i]);
+  const number = numbers[i];
+  const isNumberBetween11And90 = number >= 11 && number <= 90;
+
+  if (isNumberBetween11And90) {
+    newArrayNumbers.push(number);
   }
 }
 
@@ -135,10 +140,12 @@ let totalStrings = 0;
 
 for (let i = 0; i < crazyArray.length; i++) {
   const typeOf = typeof crazyArray[i];
+  const isItemANumber = typeOf === "number";
+  const isItemABoolean = typeOf === "boolean";
 
-  if (typeOf === "boolean") {
+  if (isItemABoolean) {
     totalBooleans++;
-  } else if (typeOf === "number") {
+  } else if (isItemANumber) {
     totalNumbers++;
   } else {
     totalStrings++;
@@ -168,25 +175,25 @@ console.log(
 
 const randomNumbers = [73, 4, 67, 10, 31, 58];
 
-const oddNumbers = []; //Ímpar
-const evenNumbers = []; //Par
+let oddNumbers = []; //Ímpar
+let evenNumbers = []; //Par
 
 const lastOddNumber = oddNumbers[oddNumbers.length - 1];
 
 for (let i = 0; i < randomNumbers.length; i++) {
-  const isEven = randomNumbers[i] % 2 === 0;
+  const number = randomNumbers[i];
+  const isEvenNumber = number % 2 === 0;
 
-  if (isEven) {
-    evenNumbers.push(randomNumbers[i]);
+  if (isEvenNumber) {
+    evenNumbers.push(number);
   } else {
-    oddNumbers.push(randomNumbers[i]);
+    oddNumbers.push(number);
   }
 }
 
+const oddNumbersString = oddNumbers.join(", ").replace(", 3", " e 3");
+const eveNumberString = evenNumbers.join(", ").replace(", 5", " e 5");
+
 console.log(
-  `Numeros ímpares: ${oddNumbers
-    .join(", ")
-    .replace(", 31", " e 31")}. Números pares: ${evenNumbers
-    .join(", ")
-    .replace(", 58", " e 58")}.`
+  `Numeros ímpares: ${oddNumbersString}. Números pares: ${eveNumberString}.`
 );
