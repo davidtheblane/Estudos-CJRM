@@ -4,10 +4,10 @@ Repositório de Estudos em Javascript do curso CJRM
 
 oraganizando 19/07/2021
 
-Índice
-[Aula 02-02 - A condicional if](Aula 02-02 - A condicional if)
-[Aula 02-03 - Else e else if statements](Aula 02-03 - Else e else if statements)
-[## Aula 02-04 - Operadores lógicos && e ||](Aula 02-04 - Operadores lógicos && e ||)
+### Índice
+<br> [Aula 02-02 - A condicional if](#)
+<br> [Aula 02-03 - Else e else if statements](#)
+<br> [Aula 02-04 - Operadores lógicos && e ||](#)
 
 ## Aula 02-02 - A condicional if
 
