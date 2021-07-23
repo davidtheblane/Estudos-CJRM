@@ -1,3 +1,4 @@
+[](#topo)
 # Estudos-CJRM
 
 Repositório de Estudos em Javascript do curso CJRM
@@ -66,9 +67,9 @@ if(password.length >= 12) {
 
 <hr>
 
-[topo](#)
-## Aula02-04 - Operadores lógicos && e || <a name="Aula02-04"></a> 
 
+## Aula02-04 - Operadores lógicos && e || <a name="Aula02-04"></a> 
+<a name="topo"></a>
 Os operadores lógicos &&(E) e ||(OU) adicionam um novo nível nas verificações das estruturas de repetições e outros métodos de programação.
 
 (E) && ⇒ Quando utilizado só retorna TRUE se todas as condições estabelecidas sejam atendidas.
