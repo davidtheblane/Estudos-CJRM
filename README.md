@@ -69,7 +69,7 @@ if(password.length >= 12) {
 
 
 ## Aula02-04 - Operadores lógicos && e || <a name="Aula02-04"></a> 
-<a name="topo"></a>
+<a name="topo">topo</a>
 Os operadores lógicos &&(E) e ||(OU) adicionam um novo nível nas verificações das estruturas de repetições e outros métodos de programação.
 
 (E) && ⇒ Quando utilizado só retorna TRUE se todas as condições estabelecidas sejam atendidas.
