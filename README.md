@@ -12,7 +12,8 @@ oraganizando 19/07/2021
 <br> [Aula 02-04 - Operadores lógicos && e ||](#Aula02-04)
 
 <hr>
-[topo](#) <br>
+
+[topo](#)
 ## Aula02-02 - A condicional if <a name="Aula02-02"></a> 
 
 A estutura condicional if é muito utilizada e uma das mais simples, if em portugues é "SE".
@@ -38,8 +39,9 @@ console.log('Você tem mais de 18 anos')
 
 <hr>
 
+[topo](#)
 ## Aula02-03 - Else e else if statements <a name="Aula02-03"></a>
-[topo](#) <br>
+
 
 "Else" e "Else if" são utilizados após a primeira verificação "If", a tradução dos dois é "Senão" e "Senão" se, basicamente eles funcionam para dar mais opções ao código, retornando mensagens ao usuário ou permitindo verifcações antes da execução do bloco de código correto para cada situação.
 
@@ -70,9 +72,9 @@ if(password.length >= 12) {
 
 <hr>
 
-
+[topo](#)
 ## Aula02-04 - Operadores lógicos && e || <a name="Aula02-04"></a> 
-[topo](#) <br>
+
 
 Os operadores lógicos &&(E) e ||(OU) adicionam um novo nível nas verificações das estruturas de repetições e outros métodos de programação.
 
