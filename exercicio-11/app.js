@@ -5,6 +5,8 @@
   - Ela deve ter um escopo global.
 */
 
+const myName = "Davi";
+
 /*
   02
 
@@ -18,7 +20,15 @@
     defined" será exibido no console;
   - Você sabe por que isso aconteceu?
 */
+//myAge deve ser declarada como escop
 
+const myAgeFunc = () => {
+  let myAge = 34;
+  console.log(myAge);
+};
+
+myAgeFunc();
+// console.log(myAge);
 /*
   03
 
@@ -37,23 +47,49 @@
       "O NOME_DO_CARRO está disponível nas cores COR_01, COR_02 e COR_03".
 */
 
+let car = {
+  name: "Eclipse",
+  brand: "Mitsubishi",
+  colors: ["Black", "White", "Red"],
+  isRunning: false,
+  run() {
+    this.isRunning = true;
+    return `${this.name} está em movimento`;
+  },
+  stop() {
+    this.isRunning = false;
+    return `${this.name} está parado`;
+  },
+  getColorsMessage() {
+    let lastColor = this.colors[this.colors.length - 1];
+    let colors = this.colors
+      .join(", ")
+      .replace(`, ${lastColor}`, ` e ${lastColor}`);
+    return `${this.name} está disponível nas cores ${colors}`;
+  },
+};
+
 /*
   04
 
   - Faça o carro andar e exiba no console se ele realmente está em movimento.
 */
 
+console.log(car.run());
+
 /*
   05
 
   - Faça o carro parar e exiba no console se ele realmente está parado.
 */
+console.log(car.stop());
 
 /*
   06
 
   - Exiba, no console, a mensagem com as cores do carro.
 */
+console.log(car.getColorsMessage());
 
 /*
   07
@@ -61,3 +97,5 @@
   - Exiba, no console, a mensagem "O carro é um MARCA_DO_CARRO NOME_DO_CARRO";
   - Utilize a notação de colchetes para acessar as propriedades do carro.
 */
+
+console.log(`O carro é um ${car["brand"]} ${car["name"]}`);
