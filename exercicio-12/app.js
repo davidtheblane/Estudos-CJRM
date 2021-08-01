@@ -13,19 +13,31 @@
 */
 
 const best2019Movies = [
-  { title: 'Parasita', directedBy: 'Bong Joon-ho' },
-  { title: 'Bacurau', directedBy: 'Kleber Mendonça Filho' },
-  { title: 'O Irlandês', directedBy: 'Martin Scorsese' },
-  { title: 'Entre Facas e Segredos', directedBy: 'Rian Johnson' },
-  { title: 'Turma da Mônica: Laços', directedBy: 'Daniel Rezende' },
-  { title: 'Homem-Aranha: No Aranhaverso', directedBy: 'Peter Ramsey' },
-  { title: 'Klaus', directedBy: 'Sergio Pablos' },
-  { title: 'Fora de Série', directedBy: 'Olivia Wilde' },
-  { title: 'Shazam', directedBy: 'David F. Sandberg' },
-  { title: 'História de um Casamento', directedBy: 'Noah Baumbach' },
-  { title: 'Varda por Agnès', directedBy: 'Agnès Varda' },
-  { title: 'A Vida Invisível', directedBy: 'Karim Aïnouz' }
-]
+  { title: "Parasita", directedBy: "Bong Joon-ho" },
+  { title: "Bacurau", directedBy: "Kleber Mendonça Filho" },
+  { title: "O Irlandês", directedBy: "Martin Scorsese" },
+  { title: "Entre Facas e Segredos", directedBy: "Rian Johnson" },
+  { title: "Turma da Mônica: Laços", directedBy: "Daniel Rezende" },
+  { title: "Homem-Aranha: No Aranhaverso", directedBy: "Peter Ramsey" },
+  { title: "Klaus", directedBy: "Sergio Pablos" },
+  { title: "Fora de Série", directedBy: "Olivia Wilde" },
+  { title: "Shazam", directedBy: "David F. Sandberg" },
+  { title: "História de um Casamento", directedBy: "Noah Baumbach" },
+  { title: "Varda por Agnès", directedBy: "Agnès Varda" },
+  { title: "A Vida Invisível", directedBy: "Karim Aïnouz" },
+];
+
+let message = `Segundo o site Omelete, os melhores filmes de 2019 são:
+  `;
+
+const generateMoviesList = (movie) => {
+  message += `- ${movie.title}, dirigido por ${movie.directedBy}
+  `;
+};
+
+best2019Movies.forEach(generateMoviesList);
+
+console.log(message);
 
 /*
   02
@@ -42,25 +54,38 @@ const best2019Movies = [
 */
 
 const youtubeUser = {
-  name: 'Roger Melo',
-  chanelUrl: 'https://www.youtube.com/channel/UCmjDevp9Y8r-qi-xueD3Izg',
+  name: "Roger Melo",
+  chanelUrl: "https://www.youtube.com/channel/UCmjDevp9Y8r-qi-xueD3Izg",
   videos: {
     total: 111,
     recentVideos: [
-      { title: 'Introdução ao TDD - Parte 02 | JavaScript | Jest', length: '28:28' },
-      { title: 'Introdução ao TDD | JavaScript | Jest', length: '19:29' },
-      { title: 'Higher-order Functions | JavaScript', length: '47:38' }
-    ]
+      {
+        title: "Introdução ao TDD - Parte 02 | JavaScript | Jest",
+        length: "28:28",
+      },
+      { title: "Introdução ao TDD | JavaScript | Jest", length: "19:29" },
+      { title: "Higher-order Functions | JavaScript", length: "47:38" },
+    ],
   },
   about: {
-    description: '🔥 Ensino as pessoas a alcançarem a fluência em JavaScript! 🔥',
+    description:
+      "🔥 Ensino as pessoas a alcançarem a fluência em JavaScript! 🔥",
     socialNetworks: {
-      twitter: 'https://twitter.com/rogermelodev',
-      gitHub: 'https://github.com/Roger-Melo'
+      twitter: "https://twitter.com/rogermelodev",
+      gitHub: "https://github.com/Roger-Melo",
     },
-    country: 'Brasil'
-  }
-}
+    country: "Brasil",
+  },
+  showRecentVideos() {
+    console.log(`Vídeos recentes de ${this.name}:`);
+
+    this.videos.recentVideos.forEach((video) => {
+      console.log(video.title);
+    });
+  },
+};
+
+youtubeUser.showRecentVideos();
 
 /*
   03
@@ -68,7 +93,7 @@ const youtubeUser = {
   - Exiba o valor do PI no console.
 */
 
-
+console.log(Math.PI);
 
 /*
   04
@@ -77,7 +102,9 @@ const youtubeUser = {
     console.
 */
 
-const firstNumber = 8.3
+const firstNumber = 8.3;
+
+console.log(Math.ceil(firstNumber));
 
 /*
   05
@@ -86,7 +113,8 @@ const firstNumber = 8.3
     forma padrão, e exiba-o no console.
 */
 
-const secondNumber = 3.5
+const secondNumber = 3.5;
+console.log(Math.round(secondNumber));
 
 /*
   06
@@ -95,15 +123,18 @@ const secondNumber = 3.5
     console.
 */
 
-const thirdNumber = 8.9
+const thirdNumber = 8.9;
 
+console.log(Math.floor(thirdNumber));
 /*
   07
 
   - Exiba no console o número abaixo com a parte decimal removida.
 */
 
-const fourthNumber = 5.5
+const fourthNumber = 5.5;
+
+console.log(Math.trunc(fourthNumber));
 
 /*
   08
@@ -111,3 +142,7 @@ const fourthNumber = 5.5
   - A cada vez que o index.html for carregado, exiba no console um número  
     aleatório de 0 à 10, incluindo 0 e 10.
 */
+
+let randomNumber = Math.random();
+
+console.log(Math.round(randomNumber * 10));
