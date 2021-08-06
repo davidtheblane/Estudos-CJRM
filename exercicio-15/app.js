@@ -5,13 +5,15 @@
     uma classe 'video';
   - Exiba no console os elementos filhos da ul com a classe já inserida.
 */
-const ul = document.querySelector("ul");
+const ul = document.querySelector(".videos");
 
 const lis = Array.from(ul.children);
 
-lis.forEach((li) => {
+const insertVideoClass = (li) => {
   li.classList.add("video");
-});
+};
+
+lis.forEach(insertVideoClass);
 
 console.log(lis);
 
@@ -46,11 +48,16 @@ console.log(ul.previousElementSibling);
   - Quando um clique acontecer em alguma das lis, faça com que a li clicada seja  
     exibida no console.
 */
-lis.forEach((li) => {
-  li.addEventListener("click", (event) => {
-    console.log(event.target.textContent);
-  });
-});
+
+const showClickedLi = (event) => {
+  console.log(event.target);
+};
+
+const addClickEvent = (li) => {
+  li.addEventListener("click", showClickedLi);
+};
+
+lis.forEach(addClickEvent);
 
 /*
   06
@@ -76,20 +83,17 @@ const videos = [
 
 const btn = document.querySelector("button");
 
-// videos.forEach((obj) => {
-//   btn.addEventListener("click", () => {
+//usando destructuring abaixo para referenciar o parametro name como
+//propriedade name dentro dos objetos do array videos.
+const insertVideoLi = ({ name }) => {
+  ul.innerHTML += `<li>${name}</li>`;
+};
 
-//   });
-// });
+const handleClickButton = () => {
+  videos.forEach(insertVideoLi);
+};
 
-btn.addEventListener("click", () => {
-  videos.forEach((obj) => {
-    // ul.innerHTML += `<li>${obj.name}</li>`;
-    const li = document.createElement("li");
-    li.textContent = `${obj.name}`;
-    ul.append(li);
-  });
-});
+btn.addEventListener("click", handleClickButton);
 /*
   07
 
@@ -99,8 +103,8 @@ btn.addEventListener("click", () => {
 
 const body = document.body;
 
-console.log(body);
-
 h1.addEventListener("click", () => {
-  body.remove();
+  body.innerHTML = "";
 });
+
+console.log(body);
