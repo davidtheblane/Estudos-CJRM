@@ -1,46 +1,72 @@
 /*
-  01
+01
 
   - Faça com que ao clicar em um dos elementos dentro da div, a mensagem  
-    'Clicou na div.' não seja exibida no console.
+  'Clicou na div.' não seja exibida no console.
 */
-
-const div = document.querySelector('div')
-const elementsInsideDiv = Array.from(div.children)
-
-elementsInsideDiv.forEach(element => {
-  element.addEventListener('click', () => {
-    console.log('Clicou no filho da div.')
-  })
-})
-
-div.addEventListener('click', () => {
-  console.log('Clicou na div.')
-})
 
 /*
   02
 
   - No código acima, faça com que quando um filho da div for clicado, a mensagem  
-    exibida no console seja "Clicou no NOME_DA_TAG_COM_LETRAS_MINÚSCULAS, filho
+  exibida no console seja "Clicou no NOME_DA_TAG_COM_LETRAS_MINÚSCULAS, filho
     da div.".
 */
 
 /*
   03
-
+  
   - No index.html, abaixo da div sem classe, insira um h2;
   - Faça com que a mensagem de clique na div e a mensagem de clique em algum
     filho da div, ao invés de ser exibida no console, seja inserida neste h2.
 */
+// elementsInsideDiv.forEach((element) => {
+//   element.addEventListener("click", (event) => {
+//     event.stopPropagation();
+//     const clickedElement = event.target.tagName.toLowerCase();
+//     h2.textContent = `Clicou no ${clickedElement}, filho da div.`;
+//   });
+// });
 
+const div = document.querySelector("div");
+const elementsInsideDiv = Array.from(div.children);
+const h2 = document.querySelector("h2");
+const egg = document.querySelector(".egg");
+const button = document.querySelector("button");
+
+const showClickedElement = ({ target }) => {
+  const clickedElement = target.tagName.toLowerCase();
+  if (clickedElement === "div") {
+    h2.textContent = `Clicou na div.`;
+    return;
+  }
+  h2.textContent = `Clicou no ${clickedElement}, filho da div`;
+};
+
+const logCopyMessage = () => {
+  console.log("Texto copiado!");
+};
+
+const showCoordinates = ({ offsetX, offsetY }) => {
+  egg.textContent = `Eixo X: ${offsetX} | Eixo Y: ${offsetY}`;
+};
+
+const changeEggColor = () => {
+  egg.style.background = "violet";
+};
+div.addEventListener("click", showClickedElement);
+
+egg.addEventListener("mousemove", showCoordinates);
+
+h2.addEventListener("copy", logCopyMessage);
+
+button.addEventListener("click", changeEggColor);
 /*
   04
 
   - Faça com que quando o texto do h2 for copiado, a mensagem "Texto copiado!"  
     seja exibida no console.
 */
-
 /*
   05
 
@@ -66,13 +92,27 @@ div.addEventListener('click', () => {
 */
 
 const people = [
-  { id: 1, name: 'Pedro Henrique', profession: 'Dentista' },
-  { id: 2, name: 'Fábio Alexandre', profession: 'Físico' },
-  { id: 3, name: 'Thiago Ferreira', profession: 'Veterinário' },
-  { id: 4, name: 'Marcelo Antonio', profession: 'Matemático' },
-  { id: 5, name: 'Camilla Midori', profession: 'Engenheira Civil' },
-  { id: 6, name: 'Gustavo D\'Aqui', profession: 'Gerente de Marketing' },
-  { id: 7, name: 'Ana Paula', profession: 'Front-end developer' },
-  { id: 8, name: 'Matheus Manucci', profession: 'Piloto' },
-  { id: 9, name: 'Hamilton Silva', profession: 'Advogado' }
-]
+  { id: 1, name: "Pedro Henrique", profession: "Dentista" },
+  { id: 2, name: "Fábio Alexandre", profession: "Físico" },
+  { id: 3, name: "Thiago Ferreira", profession: "Veterinário" },
+  { id: 4, name: "Marcelo Antonio", profession: "Matemático" },
+  { id: 5, name: "Camilla Midori", profession: "Engenheira Civil" },
+  { id: 6, name: "Gustavo D'Aqui", profession: "Gerente de Marketing" },
+  { id: 7, name: "Ana Paula", profession: "Front-end developer" },
+  { id: 8, name: "Matheus Manucci", profession: "Piloto" },
+  { id: 9, name: "Hamilton Silva", profession: "Advogado" },
+];
+
+// if (people.some((person) => person.profession === "Front-end developer")) {
+//   console.log(`O array people contém, no mínimo, um(a) Front-end developer.`);
+// }
+
+//REFATORADO
+//destructuring person.profession = profession
+const isSomePersonFrontEndDeveloper = people.some(
+  ({ profession }) => profession === "Front-end developer"
+);
+
+if (isSomePersonFrontEndDeveloper) {
+  console.log(`O array people contém, no mínimo, um(a) Front-end developer.`);
+}
