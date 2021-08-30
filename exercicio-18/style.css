@@ -6,19 +6,23 @@
 .username-help-feedback {
   margin-bottom: 2.5rem;
   color: darkorange;
+  font-weight: bold;
 }
 
 .username-success-feedback {
   margin-bottom: 2.5rem;
   color: green;
+  font-weight: bold;
 }
 
 .submit-help-feedback {
   margin-bottom: 2.5rem;
   color: red;
+  font-weight: bold;
 }
 
 .submit-success-feedback {
   margin-bottom: 2.5rem;
   color: green;
+  font-weight: bold;
 }
